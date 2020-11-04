@@ -47,7 +47,7 @@ function setPiece(position){
 
   var winner = checkWinner(); 
   // Se der velha ou houver um vencedor a função updateScore é chamada
-  // setTimeout para aguardar que a peça seja colocada no tabuleiro antes de reiniciar o mesmo
+  // setTimeout para aguardar que a peça seja colocada no tabuleiro antes de reiniciá-lo
   if(winner) {
     setTimeout(() => updateScore(winner), 1);
   } else if(moveCounter > 8) {

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head >
+<html lang="pt-br">
+  <head>
     <meta charset="utf-8"/>
     <title>Jogo da Velha</title>
-    <!-- JQuery e Bootstrap usado somente para o modal -->
+    <!-- JQuery e Bootstrap usado apenas para o modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -11,18 +11,17 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
-
   <body>
     <header>
       <h1>JOGO DA VELHA</h1>
     </header>
-    
-    <sidebar>
+
+    <aside>
       <section>
         <h3>Próxima jogada</h3>
         <span id="player-turn">-</span>
       </section>
-
+  
       <section>
         <h3>Placar</h3>
         <div class="winners-score">
@@ -42,9 +41,9 @@
       </section>
      
       <button title="Reiniciar placar" id="restart-button" onclick="resetScore()" >
-        <img src="images/refresh.svg" />
+        <img src="images/refresh.svg" alt="refresh" />
       </button>
-    </sidebar>
+    </aside>
 
     <main>
       <div id="start-container" >
