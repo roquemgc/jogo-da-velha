@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head >
+    <meta charset="utf-8"/>
+    <title>Jogo da Velha</title>
+    <!-- JQuery e Bootstrap usado somente para o modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>JOGO DA VELHA</h1>
+    </header>
+    
+    <sidebar>
+      <section>
+        <h3>Próxima jogada</h3>
+        <span id="player-turn">-</span>
+      </section>
+
+      <section>
+        <h3>Placar</h3>
+        <div class="winners-score">
+          <div class="score-item">
+            <p>X</p>
+            <span id="x-score">0</span>
+          </div>
+          <div class="score-item">
+            <p>O</p>
+            <span id="o-score">0</span>
+          </div>
+        </div>
+        <div class="score-item">
+          <p>Empates</p>
+          <span id="draw-score">0</span>
+        </div>
+      </section>
+     
+      <button title="Reiniciar placar" id="restart-button" onclick="resetScore()" >
+        <img src="images/refresh.svg" />
+      </button>
+    </sidebar>
+
+    <main>
+      <div id="start-container" >
+        <button id="start-button" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOGAR</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Escolha quem começará jogando</h4>
+              </div>
+              <div class="modal-body">
+                <button onclick="startGame(1)" data-dismiss="modal">X</button>
+                <button onclick="startGame(2)" data-dismiss="modal">O</button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="game-container">
+        <script>
+          // Gera os botões para o jogo via JavaScript
+          generateButtons();
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+@font-face {
+  font-family: anton;
+  src: url(../fonts/Anton-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  
+}
+
+body {
+  background-color: #ECE8DC;
+}
+
+header {
+  margin: 30px 0 50px;
+
+  display: flex;
+  justify-content: center; 
+}
+
+header h1{
+  font-size: 52px;
+  font-family: anton, sans-serif;
+}
+
+sidebar {
+  position: fixed;
+  height: 100%;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  left: 0;
+  top: 0;
+
+  color: #e6e6e6; 
+  background-color: #197679;
+}
+  
+  sidebar section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  sidebar h3 {
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  sidebar #player-turn {
+    font-size: 45px;
+    font-weight: 800;
+  }
+
+  sidebar .winners-score {
+    width: 120px;
+    
+    display: flex;  
+    justify-content: space-between;
+  }
+
+  sidebar .score-item {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  sidebar .score-item p {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  sidebar .score-item span {
+    height: 50px;
+    width: 50px;
+    padding: 25px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    border: 1px solid #e6e6e6; 
+    border-radius: 15px;
+  }
+
+  sidebar #restart-button {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+
+    border: 1px solid #D174A5;
+    border-radius: 50%;
+    background-color: #D887B1;
+  }
+
+  sidebar #restart-button:hover {
+    background-color: #CA6199;
+  }
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+  main #start-container #start-button {
+    height: 60px;
+    width: 150px;
+
+    border-color: #D174A5;
+    background-color: #D887B1;
+  }
+
+  main #start-container #start-button:hover {
+    background-color: #CA6199;
+  }
+
+  main #start-container .modal-body {
+    display: flex;
+    justify-content: center;
+  }
+
+  main #start-container .modal-body button {
+    height: 200px;
+    width: 200px;
+
+    font-size: 150px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #fff;
+  }
+
+  main #start-container .modal-body button:hover {
+    background-color: #999;
+  }
+
+  main #start-container .modal-body button + button {
+    margin-left: 50px;
+  }
+
+  main #game-container {
+    padding: 10px;
+  
+    display: none;
+    grid-template-columns: auto auto auto;
+
+    background-color: #1D8B8F;
+    box-shadow: 3px 2px rgba(0,0,0,0.5);
+  }
+
+  main #game-container .grid-item {
+    height: 120px;
+    width: 120px;
+
+    font-size: 50px;
+    font-weight: 800;
+    background-color: #39D3DA;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+
+  main #game-container .grid-item button {
+    height: 100%;
+    width: 100%;
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0;
+  }
